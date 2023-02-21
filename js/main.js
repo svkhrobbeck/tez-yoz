@@ -126,7 +126,7 @@ const words = [
   "kitobxon",
   "yulduz",
   "uzuk",
-  "oqsuyak"
+  "oqsuyak",
 ];
 
 let randomWord;
