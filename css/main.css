@@ -136,6 +136,35 @@ body {
   }
 }
 
+/* LOGO */
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo__link {
+  display: flex;
+}
+
+.logo__img {
+  max-width: 212px;
+  width: 100%;
+  height: auto;
+  transition: max-width 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  .logo__img {
+    max-width: 170px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .logo__img {
+    max-width: 140px;
+  }
+}
+
 /* CONTAINER */
 .container {
   width: 100%;

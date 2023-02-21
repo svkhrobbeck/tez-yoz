@@ -134,3 +134,31 @@ body {
     font-size: 18px;
   }
 }
+
+/* LOGO */
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.logo__link {
+  display: flex;
+}
+
+.logo__img {
+  max-width: 212px;
+  width: 100%;
+  height: auto;
+  transition: max-width .5s ease;
+
+  @media only screen and (max-width: $tablet) {
+    max-width: 170px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    max-width: 140px;
+  }
+}
