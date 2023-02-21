@@ -35,8 +35,13 @@
   margin-bottom: 20px;
   transition: font-size .5s ease;
 
+
   @media only screen and (max-width: $tablet) {
     font-size: 30px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    text-transform: capitalize;
   }
 }
 

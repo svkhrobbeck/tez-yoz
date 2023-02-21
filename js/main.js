@@ -67,11 +67,20 @@ const words = [
   "gugurt",
   "ustun",
   "maqol",
+  "kitob",
+  "onlayn",
+  "virtual",
   "she'r",
   "masala",
   "misol",
   "mantiq",
   "mehnat",
+  "so'z",
+  "bilim",
+  "qattiq",
+  "ko'nikma",
+  "final",
+  "oq",
 ];
 
 let randomWord;
@@ -123,7 +132,7 @@ function startSetInterval() {
 
 // word evt
 elWordInput.addEventListener("input", (e) => {
-  const word = e.target.value;
+  const word = e.target.value.toLowerCase();
 
   if (randomWord === word) {
     updateScore();
