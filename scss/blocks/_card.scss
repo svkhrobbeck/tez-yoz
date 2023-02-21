@@ -2,6 +2,10 @@
   position: absolute;
   top: 10px;
   text-align: center;
+
+  a {
+    color: var(--text-color);
+  }
 }
 
 .card {
