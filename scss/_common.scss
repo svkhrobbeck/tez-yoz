@@ -1,7 +1,7 @@
 /* CUSTOM PROPS */
 :root {
-  --primary-bg-color: #fff;
-  --text-color: #000;
+  --primary-bg-color: #1a2a33;
+  --text-color: #fff;
 }
 
 /* GLOBAL */
@@ -91,18 +91,35 @@ body {
 }
 
 /* BUTTON */
-.button {
+.start-button {
   display: inline-block;
   border: none;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 26px;
+  text-transform: uppercase;
+
+  transition: font-size .5s ease;
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 24px;
+  }
+  
+  @media only screen and (max-width: $mobile) {
+    font-size: 22px;
+  }
 }
 
-/* RETINA BGS */
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min--moz-device-pixel-ratio: 2),
-only screen and (-o-min-device-pixel-ratio: 2/1),
-only screen and (min-device-pixel-ratio: 2),
-only screen and (min-resolution: 192dpi),
-only screen and (min-resolution: 2dppx) {}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--column {
+    flex-direction: column;
+  }
+}

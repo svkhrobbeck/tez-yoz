@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tez Yoz</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project</title>
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="images/"> -->
 
-  <!-- Favicon -->
-  <!-- <link rel="shortcut icon" href="images/"> -->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-</head>
+  <body>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="container">
+        <div class="wrapper" data-wrapper>
+          <h1 class="title">TEZ YOZ</h1>
+          <div class="game-over hidden" data-game-over>
+            <h1 class="game-over__title">O'yin tugadi!</h1>
+            <p class="game-over__text">
+              Sizning balingiz: <span data-final-score-text></span>
+            </p>
+          </div>
+          <button class="start-button" type="button" data-start-btn>Boshlash</button>
+          <div class="card hidden" data-card>
+            <h3 class="card__word" data-word></h3>
+            <input
+              class="card__word-input"
+              type="text"
+              placeholder="Typing Word..."
+              data-word-input
+            />
+            <p class="card__time-text">Vaqt: <span data-time-text>60s</span></p>
+            <p class="card__score-text">Ball: <span data-score-text>0</span></p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- /MAIN CONTENT -->
 
-<body>
-
-  <!-- HEADER -->
-  <!-- /HEADER -->
-
-  <!-- MAIN CONTENT -->
-  <main class="main-content">
-  </main>
-  <!-- /MAIN CONTENT -->
-
-  <!-- FOOTER -->
-  <!-- /FOOTER -->
-
-
-  <!-- SCRIPTS -->
-  <!-- <script src="js/main.js"></script> -->
-
-</body>
-
+    <!-- SCRIPTS -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
