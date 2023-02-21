@@ -1,10 +1,12 @@
 // elements
 const elWrapper = document.querySelector("[data-wrapper]");
+const elGameOver = document.querySelector("[data-game-over]");
+const elInstruction = document.querySelector("[data-instruction]");
+
 const elWordInput = document.querySelector("[data-word-input]");
 const elWordText = document.querySelector("[data-word]");
 const elScoreText = document.querySelector("[data-score-text]");
 const elTimeText = document.querySelector("[data-time-text]");
-const elGameOver = document.querySelector("[data-game-over]");
 
 const words = [
   "afzal",
@@ -32,8 +34,8 @@ const words = [
   "bulut",
   "halokat",
   "mustaqil",
-  "ma'naviyat",
-  "prezident",
+  "tezlik",
+  "qahramon",
   "o'yin",
   "qora",
   "xalq",
@@ -49,9 +51,27 @@ const words = [
   "kontent",
   "telegram",
   "odob",
-  "oliy ta'lim",
+  "ta'lim",
+  "oliy",
   "sinf",
   "til",
+  "afsun",
+  "sir",
+  "nur",
+  "qurilma",
+  "noutbuk",
+  "telefon",
+  "gadjet",
+  "raketa",
+  "tartib",
+  "gugurt",
+  "ustun",
+  "maqol",
+  "she'r",
+  "masala",
+  "misol",
+  "mantiq",
+  "mehnat",
 ];
 
 let randomWord;
@@ -124,7 +144,14 @@ function startClick(evt) {
   score = 0;
 
   elGameOver.classList.add("hidden");
+  elInstruction.classList.add("hidden");
   el.nextElementSibling.classList.remove("hidden");
   el.classList.add("hidden");
   startSetInterval();
+}
+
+if (!elInstruction.classList.contains("hidden")) {
+  elWrapper.classList.add("wrapper--column");
+} else {
+  elWrapper.classList.remove("wrapper--column");
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,16 +19,37 @@
     <main class="main-content">
       <div class="container">
         <div class="wrapper" data-wrapper>
+          <!-- TITLE -->
           <h1 class="title">TEZ YOZ</h1>
+          <!-- GAME OVER -->
           <div class="game-over hidden" data-game-over>
             <h1 class="game-over__title">O'yin tugadi!</h1>
             <p class="game-over__text">
               Sizning balingiz: <span data-final-score-text></span>
             </p>
           </div>
+          <!-- /GAME OVER -->
+
+          <!-- INSTRUCTION -->
+          <p class="instruction" data-instruction>
+            Assalomu alaykum, xush kelibsiz!<br />o'yinni boshlashdan avval
+            iltimos qilaman o'yin shartlari bilan biroz tanishib chiqing!
+            O'yinimiz juda oddiy shunchaki 1 daqiqa davomida ekraningizda
+            chiqqan so'zlarni maxsus oynaga kiritasiz, har bir to'g'ri
+            kiritilgan so'z uchun bir ball, yakunida to'plagan ballingiz
+            ko'rsatiladi, to'plagan ballingiz 1 daqiqada to'g'ri yoza olgan
+            so'zlaringiz soniga teng bo'ladi. Endi esa bemalol startga
+            shaylaning! Omad!
+          </p>
+          <!-- /INSTRUCTION -->
+
+          <!-- START/RESTART BUTTON -->
           <button class="start-button" type="button" data-start-btn>
             Boshlash
           </button>
+          <!-- /START/RESTART BUTTON -->
+
+          <!-- CARD -->
           <div class="card hidden" data-card>
             <h3 class="card__word" data-word></h3>
             <input
@@ -39,6 +60,7 @@
             />
             <p class="card__time-text">Vaqt: <span data-time-text>60s</span></p>
             <p class="card__score-text">Ball: <span data-score-text>0</span></p>
+            <!-- /CARD -->
           </div>
         </div>
       </div>

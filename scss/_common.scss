@@ -123,3 +123,14 @@ body {
     flex-direction: column;
   }
 }
+
+.instruction {
+  text-align: center;
+  font-size: 20px;
+  transition: font-size .5s ease;
+  margin-bottom: 25px;
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 18px;
+  }
+}
