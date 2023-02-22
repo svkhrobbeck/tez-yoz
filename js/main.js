@@ -8,127 +8,6 @@ const elWordText = document.querySelector("[data-word]");
 const elScoreText = document.querySelector("[data-score-text]");
 const elTimeText = document.querySelector("[data-time-text]");
 
-const words = [
-  "afzal",
-  "olma",
-  "yer",
-  "vatan",
-  "qoshiq",
-  "fikr",
-  "kitob",
-  "yuz",
-  "kiyim",
-  "gilam",
-  "yelka",
-  "stol",
-  "koinot",
-  "tun",
-  "havo",
-  "internet",
-  "dastur",
-  "frontend",
-  "navo",
-  "motor",
-  "qish",
-  "boy",
-  "bulut",
-  "halokat",
-  "mustaqil",
-  "tezlik",
-  "qahramon",
-  "o'yin",
-  "qora",
-  "xalq",
-  "ufq",
-  "qush",
-  "qizil",
-  "shafaq",
-  "mato",
-  "erkak",
-  "yurt",
-  "uzoq",
-  "video",
-  "kontent",
-  "telegram",
-  "odob",
-  "tizim",
-  "oliy",
-  "sinf",
-  "til",
-  "afsun",
-  "sir",
-  "nur",
-  "qurilma",
-  "noutbuk",
-  "telefon",
-  "gadjet",
-  "raketa",
-  "tartib",
-  "gugurt",
-  "ustun",
-  "maqol",
-  "kitob",
-  "onlayn",
-  "virtual",
-  "she'r",
-  "masala",
-  "misol",
-  "mantiq",
-  "mehnat",
-  "soz",
-  "bilim",
-  "qattiq",
-  "qasr",
-  "final",
-  "oq",
-  "chaqmoq",
-  "barmoq",
-  "maket",
-  "oyna",
-  "shisha",
-  "idish",
-  "tuproq",
-  "xabar",
-  "belgi",
-  "kuchuk",
-  "gul",
-  "uyqu",
-  "parda",
-  "qalpoq",
-  "davr",
-  "iqlim",
-  "kontinent",
-  "vazir",
-  "shaxmat",
-  "buyuk",
-  "raqam",
-  "cho'ntak",
-  "parrak",
-  "paxta",
-  "kalamush",
-  "musht",
-  "backend",
-  "tarix",
-  "sahifa",
-  "tugma",
-  "kabel",
-  "arqon",
-  "banner",
-  "kamera",
-  "piksel",
-  "sanoq",
-  "qoplama",
-  "tutuq",
-  "quvnoq",
-  "qal'a",
-  "kenglik",
-  "balandlik",
-  "kitobxon",
-  "yulduz",
-  "uzuk",
-  "oqsuyak",
-];
-
 let randomWord;
 let newWords;
 let timeInterval;
@@ -181,7 +60,15 @@ function startSetInterval() {
 
 // word evt
 elWordInput.addEventListener("input", (e) => {
-  const word = e.target.value.toLowerCase().trim();
+  let word = e.target.value.toLowerCase().trim();
+  let otherVariant;
+
+  if (word.includes("ʻ")) {
+    otherVariant = word.indexOf("ʻ");
+    word = word.replace(word[otherVariant], "'");
+  }
+
+  console.log(word);
 
   if (randomWord === word) {
     let index = newWords.findIndex((word) => word === randomWord);
@@ -217,3 +104,11 @@ if (!elInstruction.classList.contains("hidden")) {
 } else {
   elWrapper.classList.remove("wrapper--column");
 }
+
+// const eArr = ["ko'z", "nur", "so'z"];
+
+// eArr.forEach((word) => {
+//   let symbol = word.indexOf("'");
+//   word = word.replace(word[symbol], "s");
+//   console.log(word);
+// });
