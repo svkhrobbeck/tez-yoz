@@ -63,8 +63,8 @@ elWordInput.addEventListener("input", (e) => {
   let word = e.target.value.toLowerCase().trim();
   let otherVariant;
 
-  if (word.includes("ʻ")) {
-    otherVariant = word.indexOf("ʻ");
+  if (word.includes("ʻ") || word.includes("ʼ")) {
+    otherVariant = word.includes("ʼ") ? word.indexOf("ʼ") : word.indexOf("ʻ");
     word = word.replace(word[otherVariant], "'");
   }
 
