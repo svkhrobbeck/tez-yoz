@@ -181,7 +181,7 @@ function startSetInterval() {
 
 // word evt
 elWordInput.addEventListener("input", (e) => {
-  const word = e.target.value.toLowerCase();
+  const word = e.target.value.toLowerCase().trim();
 
   if (randomWord === word) {
     let index = newWords.findIndex((word) => word === randomWord);
