@@ -158,7 +158,7 @@ function updateTime() {
     gameOver();
   } else {
     time--;
-    elTimeText.textContent = `${time}s`;
+    elTimeText.textContent = `${time >= 10 ? "" : "0"}${time}s`;
   }
 }
 
