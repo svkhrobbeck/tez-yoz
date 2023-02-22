@@ -130,12 +130,15 @@ const words = [
 ];
 
 let randomWord;
+let newWords;
 let timeInterval;
 let score = 0;
 let time = 60;
 
+newWords = [...words];
+
 function getRandomWord() {
-  return words[Math.trunc(Math.random() * words.length)];
+  return newWords[Math.trunc(Math.random() * newWords.length)];
 }
 
 function fillWord() {
@@ -181,6 +184,10 @@ elWordInput.addEventListener("input", (e) => {
   const word = e.target.value.toLowerCase();
 
   if (randomWord === word) {
+    let index = newWords.findIndex((word) => word === randomWord);
+    newWords.splice(index, 1);
+    console.log(newWords.length);
+
     updateScore();
     getRandomWord();
     fillWord();
@@ -191,8 +198,10 @@ elWordInput.addEventListener("input", (e) => {
 document.addEventListener("click", (evt) => startClick(evt));
 
 function startClick(evt) {
-  const el = evt.target.closest("[data-start-btn]");
+  newWords = [...words];
 
+  const el = evt.target.closest("[data-start-btn]");
+  console.log(newWords.length);
   if (!el) return;
 
   time = 60;
