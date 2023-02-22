@@ -197,19 +197,19 @@ elWordInput.addEventListener("input", (e) => {
 document.addEventListener("click", (evt) => startClick(evt));
 
 function startClick(evt) {
-  newWords = [...words];
-
   const el = evt.target.closest("[data-start-btn]");
   if (!el) return;
 
   time = 60;
   score = 0;
+  newWords = [...words];
 
   elGameOver.classList.add("hidden");
   elInstruction.classList.add("hidden");
   el.nextElementSibling.classList.remove("hidden");
   el.classList.add("hidden");
   startSetInterval();
+  elWordInput.focus();
 }
 
 if (!elInstruction.classList.contains("hidden")) {
