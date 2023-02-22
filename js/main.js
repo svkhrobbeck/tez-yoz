@@ -186,7 +186,6 @@ elWordInput.addEventListener("input", (e) => {
   if (randomWord === word) {
     let index = newWords.findIndex((word) => word === randomWord);
     newWords.splice(index, 1);
-    console.log(newWords.length);
 
     updateScore();
     getRandomWord();
@@ -201,7 +200,6 @@ function startClick(evt) {
   newWords = [...words];
 
   const el = evt.target.closest("[data-start-btn]");
-  console.log(newWords.length);
   if (!el) return;
 
   time = 60;
