@@ -104,11 +104,3 @@ if (!elInstruction.classList.contains("hidden")) {
 } else {
   elWrapper.classList.remove("wrapper--column");
 }
-
-// const eArr = ["ko'z", "nur", "so'z"];
-
-// eArr.forEach((word) => {
-//   let symbol = word.indexOf("'");
-//   word = word.replace(word[symbol], "s");
-//   console.log(word);
-// });
