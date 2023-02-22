@@ -134,6 +134,7 @@ let newWords;
 let timeInterval;
 let score = 0;
 let time = 60;
+let tempWord = "";
 
 newWords = [...words];
 
@@ -182,8 +183,12 @@ function startSetInterval() {
 // word evt
 elWordInput.addEventListener("input", (e) => {
   const word = e.target.value.toLowerCase().trim();
+  tempWord +=
+    word.charAt(word.length - 1) === "ʼ" || word.charAt(word.length - 1) === "ʻ"
+      ? "'"
+      : word.charAt(word.length - 1);
 
-  if (randomWord === word) {
+  if (randomWord === tempWord) {
     let index = newWords.findIndex((word) => word === randomWord);
     newWords.splice(index, 1);
 
