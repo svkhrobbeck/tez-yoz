@@ -68,8 +68,6 @@ elWordInput.addEventListener("input", (e) => {
     word = word.replace(word[otherVariant], "'");
   }
 
-  console.log(word);
-
   if (randomWord === word) {
     let index = newWords.findIndex((word) => word === randomWord);
     newWords.splice(index, 1);
