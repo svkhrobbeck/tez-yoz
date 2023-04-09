@@ -83,14 +83,13 @@ elWordInput.addEventListener("input", (e) => {
 });
 
 // Start and restart
-function gameStart(el) {
+function gameStart() {
   time = 60;
   score = 0;
   newWords = [...words];
 
   elGameOver.classList.add("hidden");
   elInstruction.classList.add("hidden");
-  el.nextElementSibling.classList.remove("hidden");
   startSetInterval();
   elWordInput.focus();
 }
@@ -99,16 +98,21 @@ function onRestartClick(evt) {
   const el = evt.target.closest("[data-restart-btn]");
   if (!el) return;
 
+  elTimeText.textContent = "60s";
+  elScoreText.textContent = 0;
+  elWordInput.value = "";
   clearInterval(timeInterval);
-  gameOver();
+  gameStart();
+  fillWord();
 }
 
 function onStartClick(evt) {
   const el = evt.target.closest("[data-start-btn]");
   if (!el) return;
 
-  gameStart(el);
+  gameStart();
   el.classList.add("hidden");
+  el.nextElementSibling.classList.remove("hidden");
 }
 
 document.addEventListener("click", (evt) => {
