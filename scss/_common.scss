@@ -39,7 +39,8 @@ body {
   height: 100%;
   font-family: "Inter", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.4;
+  font-weight: 500;
   color: var(--text-color);
   background: var(--primary-bg-color) url("../images/bg.png") no-repeat center /
     cover;
@@ -83,6 +84,12 @@ body {
 
   @media only screen and (max-width: $tablet) {
     font-size: 20px;
+    padding: 10px 34px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 18px;
+    padding: 8px 22px;
   }
 }
 
