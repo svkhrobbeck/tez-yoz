@@ -79,7 +79,7 @@ elWordInput.addEventListener("input", (e) => {
   }
 });
 
-document.addEventListener("click", (evt) => startClick(evt));
+document.addEventListener("click", startClick);
 
 function startClick(evt) {
   const el = evt.target.closest("[data-start-btn]");
