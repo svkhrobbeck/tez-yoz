@@ -17,26 +17,24 @@
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="logo">
-        <a class="logo__link" href="/">
-          <img
-            class="logo__img"
-            src="images/logo.svg"
-            alt="Tez Yoz"
-            width="212"
-            height="71"
-          />
-        </a>
-      </div>
+      <a class="logo" href="/">
+        <img
+          class="logo__img"
+          src="images/logo.svg"
+          alt="Tez Yoz"
+          width="212"
+          height="71"
+        />
+      </a>
     </header>
     <!-- /HEADER -->
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
       <div class="container">
-        <div class="wrapper" data-wrapper>
+        <section class="wrapper" data-wrapper>
           <!-- TITLE -->
-          <!-- <h1 class="title"><a href="/">TEZ YOZ</a></h1> -->
+          <h1 class="visually-hidden">TEZ YOZ</h1>
           <!-- GAME OVER -->
           <div class="game-over hidden" data-game-over>
             <h1 class="game-over__title">O'yin tugadi!</h1>
@@ -49,22 +47,20 @@
           <!-- INSTRUCTION -->
           <p class="instruction" data-instruction>
             Assalomu alaykum, o'yinimizga xush kelibsiz!<br />O'yinni
-            boshlashdan avval iltimos qilaman, o'yin shartlari bilan biroz
-            tanishib chiqing! O'yinimiz juda oddiy shunchaki 1 daqiqa davomida
-            ekraningizda chiqqan so'zlarni maxsus oynaga kiritasiz, har bir
-            to'g'ri kiritilgan so'z uchun 1 balldan olasiz, o'yin yakunida
-            to'plagan ballaringiz ko'rsatiladi, to'plagan ballaringiz 1 daqiqada
-            to'g'ri yoza olgan so'zlaringiz miqdoriga teng bo'ladi.<br />Agar
-            yaxshi mashq qilsangiz o'yin(dastur)imiz tezroq yozishni
-            o'rganishingizga ham ko'maklashadi.<br />E'tibor uchun rahmat! Endi
-            esa bemalol startga shaylaning! Omad!
+            boshlashdan avval, o'yin shartlari bilan biroz tanishib chiqing!
+            O'yinimiz oddiy, 1 daqiqa davomida ekraningizda chiqqan so'zlarni
+            maxsus maydonga kiritasiz, har bir to'g'ri kiritilgan so'z uchun 1
+            ball olasiz, o'yin yakunida to'plagan ballaringiz ko'rsatiladi,
+            to'plagan ballaringiz 1 daqiqada to'g'ri yoza olgan so'zlaringiz
+            miqdoriga teng bo'ladi.<br />Agar yaxshi mashq qilsangiz
+            o'yin(dastur)imiz tezroq yozishni o'rganishingizga ham
+            ko'maklashadi.<br />E'tibor uchun rahmat! Endi esa bemalol startga
+            shaylaning! Omad!
           </p>
           <!-- /INSTRUCTION -->
 
           <!-- START/RESTART BUTTON -->
-          <button class="start-button" type="button" data-start-btn>
-            Boshlash
-          </button>
+          <button class="button" type="button" data-start-btn>Boshlash</button>
           <!-- /START/RESTART BUTTON -->
 
           <!-- CARD -->
@@ -82,7 +78,9 @@
             <p class="card__score-text">Ball: <span data-score-text>0</span></p>
             <!-- /CARD -->
           </div>
-        </div>
+        </section>
+
+        <a class="creator-link" href="https://tme.to/svkhrobbeck">creator</a>
       </div>
     </main>
     <!-- /MAIN CONTENT -->

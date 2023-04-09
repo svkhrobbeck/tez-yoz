@@ -21,7 +21,7 @@
   gap: 10px;
   padding: 50px;
   border-radius: 10px;
-  transition: max-width .5s ease;
+  transition: max-width 0.5s ease;
 
   &.hidden {
     display: none;
@@ -37,8 +37,7 @@
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 20px;
-  transition: font-size .5s ease;
-
+  transition: font-size 0.5s ease;
 
   @media only screen and (max-width: $tablet) {
     font-size: 30px;
@@ -55,19 +54,20 @@
   padding: 10px 20px;
   min-width: 80%;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--text-color);
-  transition: font-size .5s ease;
+  transition: font-size 0.5s ease;
 
   @media only screen and (max-width: $tablet) {
     font-size: 16px;
   }
 
   &::placeholder {
+    font-weight: 500;
     font-size: 18px;
     color: rgba(0, 0, 0, 0.6);
     font-weight: 400;
-    transition: font-size .5s ease;
+    transition: font-size 0.5s ease;
 
     @media only screen and (max-width: $tablet) {
       font-size: 16px;
@@ -78,7 +78,7 @@
 .card__time-text {
   font-size: 20px;
   margin-bottom: 3px;
-  transition: font-size .5s ease;
+  transition: font-size 0.5s ease;
 
   @media only screen and (max-width: $tablet) {
     font-size: 18px;
@@ -87,7 +87,7 @@
 
 .card__score-text {
   font-size: 20px;
-  transition: font-size .5s ease;
+  transition: font-size 0.5s ease;
 
   @media only screen and (max-width: $tablet) {
     font-size: 18px;

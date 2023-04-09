@@ -1,7 +1,43 @@
+/* FONTS */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-ExtraBold.woff2") format("woff2"), url("../fonts/Inter-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 /* CUSTOM PROPS */
 :root {
-  --primary-bg-color: #1a2a33;
-  --text-color: #fff;
+  --primary-bg-color: #080f20;
+  --text-color: #ccd5e0;
 }
 
 /* GLOBAL */
@@ -37,37 +73,13 @@ img {
 
 body {
   height: 100%;
-  font-family: "Arial", sans-serif;
+  font-family: "Inter", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--text-color);
-  background-color: var(--primary-bg-color);
+  background: var(--primary-bg-color) url("../images/bg.png") no-repeat center/cover;
   display: flex;
   flex-direction: column;
-}
-
-/* SCROLL BAR */
-@media only screen and (min-width: 768px) {
-  ::-webkit-scrollbar {
-    width: 12px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  ::-webkit-scrollbar-track {
-    border-radius: 8px;
-    box-shadow: inset 0 0 5px grey;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  ::-webkit-scrollbar-thumb {
-    background: rgb(110, 110, 110);
-    border-radius: 10px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(110, 110, 110);
-  }
 }
 
 /* VISUALLY HIDDEN */
@@ -91,26 +103,23 @@ body {
 }
 
 /* BUTTON */
-.start-button {
+.button {
   display: inline-block;
-  border: none;
+  border: 1px solid #ccd5e0;
   cursor: pointer;
   text-align: center;
+  background-color: transparent;
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 26px;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
   text-transform: uppercase;
-  transition: font-size 0.5s ease;
 }
 @media only screen and (max-width: 768px) {
-  .start-button {
-    font-size: 24px;
-  }
-}
-@media only screen and (max-width: 576px) {
-  .start-button {
-    font-size: 22px;
+  .button {
+    font-size: 20px;
   }
 }
 
@@ -127,32 +136,33 @@ body {
 .instruction {
   text-align: center;
   font-size: 20px;
-  transition: font-size 0.5s ease;
   margin-bottom: 25px;
 }
 @media only screen and (max-width: 768px) {
   .instruction {
     font-size: 18px;
+    text-align: justify;
   }
 }
 
 /* LOGO */
 .logo {
   position: absolute;
-  top: 10px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.logo__link {
   display: flex;
+}
+@media only screen and (max-width: 768px) {
+  .logo {
+    top: 12px;
+  }
 }
 
 .logo__img {
   max-width: 212px;
   width: 100%;
   height: auto;
-  transition: max-width 0.5s ease;
 }
 @media only screen and (max-width: 768px) {
   .logo__img {
@@ -163,6 +173,16 @@ body {
   .logo__img {
     max-width: 140px;
   }
+}
+
+.creator-link {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff8d13;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 /* CONTAINER */
@@ -230,7 +250,7 @@ body {
   padding: 10px 20px;
   min-width: 80%;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--text-color);
   transition: font-size 0.5s ease;
 }
@@ -240,6 +260,7 @@ body {
   }
 }
 .card__word-input::-moz-placeholder {
+  font-weight: 500;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 400;
@@ -247,6 +268,7 @@ body {
   transition: font-size 0.5s ease;
 }
 .card__word-input::placeholder {
+  font-weight: 500;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 400;
@@ -295,22 +317,34 @@ body {
 }
 
 .game-over__title {
-  font-size: 40px;
-  margin-bottom: 2px;
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 8px;
   transition: font-size 0.5s ease;
 }
 @media only screen and (max-width: 768px) {
   .game-over__title {
-    font-size: 36px;
+    font-size: 52px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .game-over__title {
+    font-size: 42px;
   }
 }
 
 .game-over__text {
   text-align: center;
-  font-size: 20px;
+  font-size: 28px;
+  font-weight: 500;
   transition: font-size 0.5s ease;
 }
 @media only screen and (max-width: 768px) {
+  .game-over__text {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 576px) {
   .game-over__text {
     font-size: 18px;
   }

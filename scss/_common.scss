@@ -1,7 +1,7 @@
 /* CUSTOM PROPS */
 :root {
-  --primary-bg-color: #1a2a33;
-  --text-color: #fff;
+  --primary-bg-color: #080f20;
+  --text-color: #ccd5e0;
 }
 
 /* GLOBAL */
@@ -37,38 +37,14 @@ img {
 
 body {
   height: 100%;
-  font-family: "Arial", sans-serif;
+  font-family: "Inter", "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--text-color);
-  background-color: var(--primary-bg-color);
+  background: var(--primary-bg-color) url("../images/bg.png") no-repeat center /
+    cover;
   display: flex;
   flex-direction: column;
-}
-
-/* SCROLL BAR */
-::-webkit-scrollbar {
-  @media only screen and (min-width: $tablet) {
-    width: 12px;
-  }
-}
-
-::-webkit-scrollbar-track {
-  @media only screen and (min-width: $tablet) {
-    border-radius: 8px;
-    box-shadow: inset 0 0 5px grey;
-  }
-}
-
-::-webkit-scrollbar-thumb {
-  @media only screen and (min-width: $tablet) {
-    background: rgb(110, 110, 110);
-    border-radius: 10px;
-
-    &:hover {
-      background: rgb(110, 110, 110);
-    }
-  }
 }
 
 /* VISUALLY HIDDEN */
@@ -91,25 +67,22 @@ body {
 }
 
 /* BUTTON */
-.start-button {
+.button {
   display: inline-block;
-  border: none;
+  border: 1px solid #ccd5e0;
   cursor: pointer;
   text-align: center;
+  background-color: transparent;
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 26px;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
   text-transform: uppercase;
 
-  transition: font-size .5s ease;
-
   @media only screen and (max-width: $tablet) {
-    font-size: 24px;
-  }
-  
-  @media only screen and (max-width: $mobile) {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -127,32 +100,31 @@ body {
 .instruction {
   text-align: center;
   font-size: 20px;
-  transition: font-size .5s ease;
   margin-bottom: 25px;
 
   @media only screen and (max-width: $tablet) {
     font-size: 18px;
+    text-align: justify;
   }
 }
 
 /* LOGO */
 .logo {
   position: absolute;
-  top: 10px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
-
-}
-
-.logo__link {
   display: flex;
+
+  @media only screen and (max-width: $tablet) {
+    top: 12px;
+  }
 }
 
 .logo__img {
   max-width: 212px;
   width: 100%;
   height: auto;
-  transition: max-width .5s ease;
 
   @media only screen and (max-width: $tablet) {
     max-width: 170px;
@@ -161,4 +133,14 @@ body {
   @media only screen and (max-width: $mobile) {
     max-width: 140px;
   }
+}
+
+.creator-link {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff8d13;
+  font-size: 22px;
+  font-weight: 600;
 }
