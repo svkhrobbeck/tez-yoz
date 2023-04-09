@@ -96,9 +96,3 @@ function startClick(evt) {
   startSetInterval();
   elWordInput.focus();
 }
-
-if (!elInstruction.classList.contains("hidden")) {
-  elWrapper.classList.add("wrapper--column");
-} else {
-  elWrapper.classList.remove("wrapper--column");
-}

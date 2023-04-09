@@ -31,62 +31,57 @@
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
-      <div class="container">
-        <section class="wrapper" data-wrapper>
-          <!-- TITLE -->
-          <h1 class="visually-hidden">TEZ YOZ</h1>
-          <!-- GAME OVER -->
-          <div class="game-over hidden" data-game-over>
-            <h1 class="game-over__title">O'yin tugadi!</h1>
-            <p class="game-over__text">
-              Sizning balingiz: <span data-final-score-text></span>
-            </p>
-          </div>
-          <!-- /GAME OVER -->
-
-          <!-- INSTRUCTION -->
-          <p class="instruction" data-instruction>
-            Assalomu alaykum, o'yinimizga xush kelibsiz!<br />O'yinni
-            boshlashdan avval, o'yin shartlari bilan biroz tanishib chiqing!
-            O'yinimiz oddiy, 1 daqiqa davomida ekraningizda chiqqan so'zlarni
-            maxsus maydonga kiritasiz, har bir to'g'ri kiritilgan so'z uchun 1
-            ball olasiz, o'yin yakunida to'plagan ballaringiz ko'rsatiladi,
-            to'plagan ballaringiz 1 daqiqada to'g'ri yoza olgan so'zlaringiz
-            miqdoriga teng bo'ladi.<br />Agar yaxshi mashq qilsangiz
-            o'yin(dastur)imiz tezroq yozishni o'rganishingizga ham
-            ko'maklashadi.<br />E'tibor uchun rahmat! Endi esa bemalol startga
-            shaylaning! Omad!
+      <section class="wrapper container" data-wrapper>
+        <!-- TITLE -->
+        <h1 class="visually-hidden">TEZ YOZ</h1>
+        <!-- GAME OVER -->
+        <div class="game-over hidden" data-game-over>
+          <h1 class="game-over__title">O'yin tugadi!</h1>
+          <p class="game-over__text">
+            Sizning balingiz: <span data-final-score-text></span>
           </p>
-          <!-- /INSTRUCTION -->
+        </div>
+        <!-- /GAME OVER -->
 
-          <!-- START/RESTART BUTTON -->
-          <button class="button" type="button" data-start-btn>Boshlash</button>
-          <!-- /START/RESTART BUTTON -->
+        <!-- INSTRUCTION -->
+        <p class="instruction" data-instruction>
+          Assalomu alaykum, o'yinimizga xush kelibsiz!<br />O'yinni boshlashdan
+          avval, o'yin shartlari bilan biroz tanishib chiqing! O'yinimiz oddiy,
+          1 daqiqa davomida ekraningizda chiqqan so'zlarni maxsus maydonga
+          kiritasiz, har bir to'g'ri kiritilgan so'z uchun 1 ball olasiz, o'yin
+          yakunida to'plagan ballaringiz ko'rsatiladi, to'plagan ballaringiz 1
+          daqiqada to'g'ri yoza olgan so'zlaringiz miqdoriga teng bo'ladi.<br />Agar
+          yaxshi mashq qilsangiz o'yin(dastur)imiz tezroq yozishni
+          o'rganishingizga ham ko'maklashadi.<br />E'tibor uchun rahmat! Endi
+          esa bemalol startga shaylaning! Omad!
+        </p>
+        <!-- /INSTRUCTION -->
 
-          <!-- CARD -->
-          <div class="card hidden" data-card>
-            <h3 class="card__word" data-word></h3>
-            <input
-              class="card__word-input"
-              type="text"
-              name="word"
-              placeholder="So'zni yozing..."
-              autocomplete="off"
-              data-word-input
-            />
-            <p class="card__time-text">Vaqt: <span data-time-text>60s</span></p>
-            <p class="card__score-text">Ball: <span data-score-text>0</span></p>
-            <!-- /CARD -->
-          </div>
-        </section>
+        <!-- START/RESTART BUTTON -->
+        <button class="button" type="button" data-start-btn>Boshlash</button>
+        <!-- /START/RESTART BUTTON -->
 
-        <a
-          class="creator-link"
-          href="https://tme.to/svkhrobbeck"
-          target="_blank"
-          >creator</a
-        >
-      </div>
+        <!-- CARD -->
+        <div class="card hidden" data-card>
+          <h3 class="card__word" data-word></h3>
+          <input
+            class="card__word-input"
+            type="text"
+            name="word"
+            placeholder="So'zni yozing..."
+            autocomplete="off"
+            data-word-input
+          />
+          <p class="card__time-text">Vaqt: <span data-time-text>60s</span></p>
+          <p class="card__score-text">Ball: <span data-score-text>0</span></p>
+          <!-- /CARD -->
+        </div>
+      </section>
+
+      <!-- CREATOR -->
+      <a class="creator-link" href="https://tme.to/svkhrobbeck" target="_blank"
+        >creator</a
+      >
     </main>
     <!-- /MAIN CONTENT -->
 

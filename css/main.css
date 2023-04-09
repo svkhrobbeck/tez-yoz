@@ -128,8 +128,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.wrapper--column {
   flex-direction: column;
 }
 
@@ -188,7 +186,7 @@ body {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 0 20px;
 }
