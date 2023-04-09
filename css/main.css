@@ -222,6 +222,7 @@ body {
   gap: 10px;
   padding: 50px;
   border-radius: 10px;
+  position: relative;
   transition: max-width 0.5s ease;
 }
 .card.hidden {
@@ -291,8 +292,23 @@ body {
   }
 }
 
+.btn-restart {
+  border: none;
+  display: flex;
+  background-color: transparent;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.btn-restart__img {
+  width: 24px;
+  height: 24px;
+}
+
 .card__time-text {
   font-size: 20px;
+  font-weight: 600;
   margin-bottom: 3px;
   transition: font-size 0.5s ease;
 }
@@ -304,6 +320,7 @@ body {
 
 .card__score-text {
   font-size: 20px;
+  font-weight: 600;
   transition: font-size 0.5s ease;
 }
 @media only screen and (max-width: 768px) {

@@ -23,12 +23,14 @@ function getRandomWord() {
 function fillWord() {
   randomWord = getRandomWord();
   elWordText.textContent = randomWord;
+  elWordText.title = randomWord;
 }
 fillWord();
 
 function updateScore() {
   score++;
   elScoreText.textContent = score;
+  elScoreText.title = score;
 }
 
 function updateTime() {
@@ -38,6 +40,7 @@ function updateTime() {
   } else {
     time--;
     elTimeText.textContent = `${time >= 10 ? "" : "0"}${time}s`;
+    elTimeText.title = `${time >= 10 ? "" : "0"}${time}s`;
   }
 }
 
@@ -79,12 +82,8 @@ elWordInput.addEventListener("input", (e) => {
   }
 });
 
-document.addEventListener("click", startClick);
-
-function startClick(evt) {
-  const el = evt.target.closest("[data-start-btn]");
-  if (!el) return;
-
+// Start and restart
+function gameStart(el) {
   time = 60;
   score = 0;
   newWords = [...words];
@@ -92,7 +91,27 @@ function startClick(evt) {
   elGameOver.classList.add("hidden");
   elInstruction.classList.add("hidden");
   el.nextElementSibling.classList.remove("hidden");
-  el.classList.add("hidden");
   startSetInterval();
   elWordInput.focus();
 }
+
+function onRestartClick(evt) {
+  const el = evt.target.closest("[data-restart-btn]");
+  if (!el) return;
+
+  clearInterval(timeInterval);
+  gameOver();
+}
+
+function onStartClick(evt) {
+  const el = evt.target.closest("[data-start-btn]");
+  if (!el) return;
+
+  gameStart(el);
+  el.classList.add("hidden");
+}
+
+document.addEventListener("click", (evt) => {
+  onRestartClick(evt);
+  onStartClick(evt);
+});
