@@ -102,17 +102,17 @@ function onRestartClick(evt) {
   elScoreText.textContent = 0;
   elWordInput.value = "";
   clearInterval(timeInterval);
-  gameStart();
   fillWord();
+  gameStart();
 }
 
 function onStartClick(evt) {
   const el = evt.target.closest("[data-start-btn]");
   if (!el) return;
 
-  gameStart();
   el.classList.add("hidden");
   el.nextElementSibling.classList.remove("hidden");
+  gameStart();
 }
 
 document.addEventListener("click", (evt) => {
